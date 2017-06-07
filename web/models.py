@@ -8,6 +8,9 @@ class Expense(models.Model):
     amount = models.BigIntegerField()
     user = models.ForeignKey(User)
 
+    def __str__(self):
+        return "%s %d"
+
 
 class Income(models.Model):
     text = models.CharField(max_length=255)
